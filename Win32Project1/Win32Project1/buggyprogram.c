@@ -10,9 +10,10 @@ char* stackPtrEscape() {
     return str; // stack address escaped
 }
 
+
 int main(int argc, char* argv[])
 {
-    
+
 	// 1.1) Null Pointer Dereference
 	int *p1;
 	p1 = NULL;
@@ -57,7 +58,8 @@ int main(int argc, char* argv[])
     
     // 3.1) Divide By Zero
     int a = 2;
-    a = a / (1-1);
+    int zero = 0;
+    a = a / zero;
     
     // 3.2) Never Divide By Zero
     int b = 2;
@@ -93,8 +95,9 @@ int main(int argc, char* argv[])
     int badArr1[f1];
     
     // 5.2) Variable-Length Array Of Size Nonzero
+    int f2 = 0;
     if (1) {
-        int f2 = 0;
+        f2 = 2;
     }
     int badArr2[f2];
 
